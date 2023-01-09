@@ -10,14 +10,14 @@ const ContentContainer = () => {
       const response = await getAll();
       setData(response);
     }
-    getData()
+    getData();
   }, []);
 
   return (
     <div className="content-container">
-      {data.map((el) => {
-        return <DataContainer el={el} />;
-      })}
+      {data
+        ? data.map((el) => <DataContainer el={el} />)
+        : "no data to display"}
     </div>
   );
 };

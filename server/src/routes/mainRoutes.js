@@ -3,7 +3,8 @@ import * as mainController from "../controllers/mainController.js";
 const router = express.Router();
 
 router
-  .post("/", mainController.index)
+  .get("/", mainController.serverRunning)
+  .post("/getAll", mainController.index)
   .post("/addOne", mainController.addOne)
   .post("/removeOne", mainController.removeOne);
 
