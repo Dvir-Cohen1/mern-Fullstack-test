@@ -8,16 +8,29 @@ const ContentContainer = () => {
   useEffect(() => {
     async function fetchData() {
       const { data } = await axios.get("http://localhost:8001/getAll");
-      console.log(data.data);
+
       setData(data.data);
     }
     fetchData();
-  }, [data]);
+  }, []);
+
+  const removeOne = async (dataId) => {
+    try {
+      console.log(dataId)
+      const response = await axios.delete("http://localhost:8001/removeOne", { dataId });
+      return response;
+    } catch (error) {
+      console.log(error);
+      return Promise.reject(error);
+    }
+  };
 
   return (
     <div className="content-container">
       {data
-        ? data.map((el, indexId) => <DataContainer key={indexId} el={el} />)
+        ? data.map((el, indexId) => (
+            <DataContainer key={indexId} el={el} removeOne={removeOne} />
+          ))
         : "no data to display"}
     </div>
   );

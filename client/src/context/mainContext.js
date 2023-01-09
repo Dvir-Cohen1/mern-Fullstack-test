@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 // import addOne from '../services/mainServices'
 const MainContext = createContext();
 
-export function useGameContext() {
+export function useMainContext() {
   return useContext(MainContext);
 }
 

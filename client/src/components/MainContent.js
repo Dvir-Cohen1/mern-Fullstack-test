@@ -24,6 +24,7 @@ const MainContent = (props) => {
           margin="normal"
           name="title"
           variant="outlined"
+          required
         />
         <TextField
           onChange={(e) => setImageUrlTitle(e.target.value)}
@@ -32,6 +33,7 @@ const MainContent = (props) => {
           margin="normal"
           name="imageUrl"
           variant="outlined"
+          required
         />
         <Button type="submit" variant="contained">
           ADD

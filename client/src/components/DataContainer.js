@@ -1,12 +1,11 @@
 import React from "react";
-import removeOne from "../../src/services/mainServices";
 
-const DataContainer = ({ el }) => {
+const DataContainer = ({ el, removeOne }) => {
   return (
     <div>
       <p>{el.title}</p>
       <img src={el.imageUrl} alt="dataImage"></img>
-      {/* <button onClick={removeOne(el.id)}>X</button> */}
+      <button onClick={() => removeOne(el._id)}>X</button>
     </div>
   );
 };
