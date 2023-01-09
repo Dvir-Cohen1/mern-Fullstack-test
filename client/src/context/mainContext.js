@@ -9,13 +9,9 @@ export function useMainContext() {
 export default function MainProvider({ children }) {
   const [data, setData] = useState({});
 
-
-
   // const addOneRequest = () => {
   //      setState((prev) => !prev);
   // };
 
-  return (
-    <MainContext.Provider value={data}>{children}</MainContext.Provider>
-  );
+  return <MainContext.Provider value={data}>{children}</MainContext.Provider>;
 }

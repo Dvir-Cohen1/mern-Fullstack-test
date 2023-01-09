@@ -12,12 +12,13 @@ const ContentContainer = () => {
       setData(data.data);
     }
     fetchData();
-  }, []);
+  }, [data]);
 
   const removeOne = async (dataId) => {
     try {
-      console.log(dataId)
-      const response = await axios.delete("http://localhost:8001/removeOne", { dataId });
+      const response = await axios.delete("http://localhost:8001/removeOne", {
+        dataId,
+      });
       return response;
     } catch (error) {
       console.log(error);
@@ -27,7 +28,7 @@ const ContentContainer = () => {
 
   return (
     <div className="content-container">
-      {data
+      {data.length
         ? data.map((el, indexId) => (
             <DataContainer key={indexId} el={el} removeOne={removeOne} />
           ))

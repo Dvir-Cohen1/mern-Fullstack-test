@@ -2,9 +2,9 @@ import React from "react";
 
 const DataContainer = ({ el, removeOne }) => {
   return (
-    <div>
+    <div className="data-container">
       <p>{el.title}</p>
-      <img src={el.imageUrl} alt="dataImage"></img>
+      <img width="80%" src={el.imageUrl} alt="dataImage"></img>
       <button onClick={() => removeOne(el._id)}>X</button>
     </div>
   );

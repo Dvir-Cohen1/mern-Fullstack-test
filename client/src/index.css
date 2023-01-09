@@ -24,10 +24,25 @@ code {
   align-items: center;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .content-container {
   text-align: center;
   margin-top: 1rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  border: 1px solid #0000000d;
+  width: 100%;
+  box-shadow: 0 0 5px -2px #0000004a;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }

@@ -6,7 +6,7 @@ const api = axios.create({
 
 const getAll = async () => {
   try {
-    const {data} = await api.post("/getAll");
+    const { data } = await api.post("/getAll");
     return data;
   } catch (error) {
     console.log(error);
@@ -16,8 +16,6 @@ const getAll = async () => {
 
 const addOne = async (title, imageUrl) => {
   try {
-    console.log(title, imageUrl);
-
     const response = await api.post("/addOne", { title, imageUrl });
     return response;
   } catch (error) {

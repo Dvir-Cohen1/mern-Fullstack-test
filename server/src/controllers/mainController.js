@@ -23,7 +23,6 @@ export async function addOne(req, res, next) {
 }
 export async function removeOne(req, res, next) {
   try {
-    console.log("asd");
     const pet = await MainSchema.findOneAndRemove({ id: req.body.id });
     if (pet) return res.status(200).json({ error: false, msg: "pet deleted" });
   } catch (error) {
