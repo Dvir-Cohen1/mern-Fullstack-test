@@ -4,8 +4,8 @@ const router = express.Router();
 
 router
   .get("/", mainController.serverRunning)
-  .post("/getAll", mainController.index)
+  .get("/getAll", mainController.index)
   .post("/addOne", mainController.addOne)
-  .post("/removeOne", mainController.removeOne);
+  .delete("/removeOne", mainController.removeOne);
 
 export default router;

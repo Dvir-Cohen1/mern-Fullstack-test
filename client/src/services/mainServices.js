@@ -28,7 +28,7 @@ const addOne = async (title, imageUrl) => {
 
 const removeOne = async (dataId) => {
   try {
-    const response = await api.post("/removeOne", { dataId });
+    const response = await api.delete("/removeOne", { dataId });
     return response;
   } catch (error) {
     console.log(error);

@@ -3,22 +3,19 @@ import { createContext, useContext, useState, useEffect } from "react";
 const MainContext = createContext();
 
 export function useGameContext() {
-     return useContext(MainContext);
+  return useContext(MainContext);
 }
 
 export default function MainProvider({ children }) {
-     const [requestData, setRequestData] = useState({
-          title: '',
-          imageUrl: ''
-     });
+  const [data, setData] = useState({});
 
-     // const addOneRequest = () => {
-     //      setState((prev) => !prev);
-     // };
 
-     return (
-          <MainContext.Provider value={requestData}>
-               {children}
-          </MainContext.Provider>
-     );
+
+  // const addOneRequest = () => {
+  //      setState((prev) => !prev);
+  // };
+
+  return (
+    <MainContext.Provider value={data}>{children}</MainContext.Provider>
+  );
 }
