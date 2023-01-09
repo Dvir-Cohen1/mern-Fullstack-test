@@ -12,11 +12,22 @@ code {
     monospace;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 1rem;
+}
+
+.content-container {
+  text-align: center;
+  margin-top: 1rem;
 }
