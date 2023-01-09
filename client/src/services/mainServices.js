@@ -6,8 +6,8 @@ const api = axios.create({
 
 const getAll = async () => {
   try {
-    const response = await api.post("/");
-    return response;
+    const {data} = await api.post("/getAll");
+    return data;
   } catch (error) {
     console.log(error);
     return Promise.reject(error);

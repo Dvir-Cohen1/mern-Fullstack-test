@@ -6,7 +6,7 @@ const DataContainer = ({ el }) => {
     <div>
       <p>{el.title}</p>
       <img src={el.imageUrl} alt="dataImage"></img>
-      <button onClick={removeOne(el.id)}>X</button>
+      {/* <button onClick={removeOne(el.id)}>X</button> */}
     </div>
   );
 };
