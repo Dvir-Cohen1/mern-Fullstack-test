@@ -5,13 +5,13 @@ import DataContainer from "./DataContainer";
 const ContentContainer = () => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    async function getData() {
-      const response = await getAll();
-      setData(response);
-    }
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   async function getData() {
+  //     const response = await getAll();
+  //     setData(response);
+  //   }
+  //   getData();
+  // }, []);
 
   return (
     <div className="content-container">

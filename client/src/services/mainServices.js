@@ -16,6 +16,8 @@ const getAll = async () => {
 
 const addOne = async (title, imageUrl) => {
   try {
+    console.log(title, imageUrl);
+
     const response = await api.post("/addOne", { title, imageUrl });
     return response;
   } catch (error) {
